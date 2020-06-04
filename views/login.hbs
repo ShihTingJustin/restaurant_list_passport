@@ -1,0 +1,20 @@
+<div class="container h-100">
+  <div class="row h-100 my-auto justify-content-center align-items-center flex-column">
+    <form method="POST" action="/login-2" class='bg-white text-center mt-3 p-4' id='login-card'>
+      <div class="form-group mt-2">
+        <h2 id="brand-logo" class="mb-4">Feed Your Soul</h2>
+        <div class="mb-3">{{email}}</div>
+        <div for="exampleInputPassword1" class="font-weight-bold">Sign in</div>
+        <input type="email" name="email" class="form-control input-area mt-5" id="inputEmail" placeholder="email">
+        <input type="password" name="password" class="form-control input-area mt-5" id="inputPassword"
+          placeholder="Password">
+      </div>
+      <div class="form-check ">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1"><small>Keep me logged in</small></label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 my-4">Log in</button>
+      <small id="emailHelp" class="form-text text-muted mt-4">Forgot your password ?</small>
+    </form>
+  </div>
+</div>

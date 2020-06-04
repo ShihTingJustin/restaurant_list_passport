@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+html, body, main {
+  height: 100%;
+}
+/* .container, .row {
+  height: 100%;
+} */
+
+#login-card {
+  border: 1px solid #cccccc;
+  border-radius: 3%;
+  width: 20rem;
+  height: 29rem;
+}
+
+#brand-logo {
+  font-family: 'Mr Dafoe', cursive;
+  color: #dc3543;
+  cursor: pointer;
+}
+
+.help {
+  cursor: pointer;
+}
+
+#brand-logo:hover {
+  color: #ff626f;
+}
+
+#next-btn {
+  background-color: #188FFF;
+}
+
+.input-area {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+  border-radius: 0;
+  letter-spacing: 0.5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #188FFF;
+}
+
+#create-btn, #logout-btn {
+  color: #188FFF;
+  border: 1px solid #188FFF;
+}
+
+.form-group > a:hover {
+  text-decoration: none;
+}
