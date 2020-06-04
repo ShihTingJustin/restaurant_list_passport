@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .navbar-brand {
+  color: #dc3543;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ff626f;
+}
+
+.card-photo:hover {
+  opacity: 0.8;
+}
+
+.card.photo {
+  position: relative;
+}
+
+.card-photo img {
+  display: block;
+}
+
+.card-photo i {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.header-right a {
+  color: #000000;
+  border: 2px solid transparent;
+}
+
+.header-right button {
+  background-color: #000000;
+  border-radius: 12px;
+  border: 2px solid #000000;
+}
+
+.header-right a:hover {
+  text-decoration: none;
+  border: 2px solid #000000;
+  border-radius: 12px;
+}
+
+.navbar-brand {
+  font-family: 'Mr Dafoe', cursive;
+}
+
+/* .blury {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(225, 225, 225, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+} */
+
+.search-input {
+  /* width: 20rem; */
+  text-indent: 27px;  
+  /* 縮排屬性 */
+}
+
+.search-input:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.search-area {
+  position: relative;
+  display: block;
+}
+
+.search-area i {
+  position: absolute;  
+  left: 0.8rem;
+}
+
+.search-area, .dropdown {
+  margin: 2rem 0;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* .dropdown-menu {
+  transition: all 2s;
+} */
+
+.selector, .form-control::placeholder {
+  color: #aaaaaa;
+  font-size: 0.8rem;
+}
+
+.selector::placeholder {
+  text-align: center;
+}
+
+.btn-major {
+  background-color: #dc3543;
+  color: white;
+}
+
+
+
+.card {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img{
+  height: 180px;
+}
+
+.card-title{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.restaurant-info {
+  font-size: 0.8rem;
+}
+
+.restaurant-show-title {
+  position: relative;
+  top: 50px;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: relative;
+}
+
+.content-block, .nothing-page {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+}
+
+.show-block {
+  margin-top: 6rem;
+  margin-bottom: 10rem;
+}
+
+/* .footer-container {
+  background-color: #f7f7f7;
+} */
+
+.page-footer {
+  margin: 0 6rem 0 6rem;
+  border-top: 1px solid #DDDDDD;
+}
+
+.copyright {
+  border-top: 1px solid #DDDDDD;
+  font-size: 0.8rem;
+}
+
+.copyright a, .foot-info a {
+  color: #343A40;
+}
+
+.copyright a:hover {
+  text-decoration: none;
+}
+
+.foot-info a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+  
+  .card img{
+    height: 115px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+
+
+  .restaurant-show-title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  
+  .container {
+    font-size: x-small;
+  }
+
+  .card img{
+    height: auto;
+  }
+  
+}
+
+
+/* new edit */
+.input-area {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+  border-radius: 0;
+  letter-spacing: 0.5px;
+  margin: 1.2rem 0;
+}
+
+.input-area:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #ff626f;
+  background: transparent;
+}
+
+.fa-info-circle, .fa-pencil-alt, .fa-times-circle {
+  color: #6C757D;
+  background: transparent;
+}
+
+.fa-info-circle:hover, .fa-pencil-alt:hover, .fa-times-circle:hover {
+  color: #dc3543;
+}
+
+#card-editor a:hover {
+  text-decoration: none;
+}

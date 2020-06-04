@@ -1,0 +1,65 @@
+<!-- ./views/index.handlebars -->
+<!-- search bar -->
+<div class="container">
+  <div class="search-bar row d-flex flex-wrap justify-content-center">
+    <div
+      class="input-group row m-0 d-flex justify-content-center justify-content-sm-start col-12 col-sm-8 col-md-7 col-lg-7">
+      <form action="/search" method="GET"
+        class="search-area d-flex align-items-center p-0 col-6 col-sm-8 col-md-7 col-lg-7">
+        <i class="fas fa-search"></i>
+        <input type="text" name="keyword" class="form-control search-input" placeholder="尋找你愛的餐廳名稱或種類"
+          aria-label="Restaurant Name..." aria-describedby="search-button" value="{{ keyword }}">
+      </form>
+    </div>
+    <div class="dropdown form-group h-100 justify-content-sm-end col-5 col-sm-4 col-md-3 col-lg-2">
+      <select onchange="location = this.value;" name="sorting" id="inputState" class="form-control selector">
+        <option class='selector-title selector' selected>排列</option>
+        <option class='sort-asc selector' value="/sort/name/asc">餐廳名稱 (A ~ Z)</option>
+        <option class='sort-desc selector' value="/sort/name/desc">餐廳名稱 (Z ~ A)</option>
+        <option class="rating-desc selector" value="/sort/rating/desc">顧客評價 (高 ~ 低)</option>
+        <option class="rating-asc selector" value="/sort/rating/asc">顧客評價 (低 ~ 高)</option>
+      </select>
+    </div>
+  </div>
+
+
+  <!-- restaurant list -->
+  <div class="row my-5">
+    {{#each restaurants}}
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+      <a href="/restaurants/{{ this._id }}" class="text-secondary">
+        <div class="card mb-3 h-100">
+          <div class="card-photo">
+            <i class="far fa-heart text-right"></i>
+            <img class="card-img-top" src="{{ this.image }}" alt="">
+          </div>
+          <div class="card-body">
+            <h6 class="card-title text-center">{{ this.name }}</h6>
+            <div class="restaurant-info">
+              <div class="d-flex w-100 justify-content-center mt-4">
+                <span class="badge badge-pill badge-danger font-weight-normal mr-2">{{ this.rating }}<i
+                    class="fas fa-star fa-xs ml-1"></i>
+                </span>
+                <span class="badge badge-pill badge-secondary font-weight-normal">{{ this.category }}
+                </span>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-2" style="margin-bottom: -1.5rem;" id="card-editor">
+              <a href="/restaurants/{{ this._id }}">
+                <i class="fas fa-info-circle"></i>
+              </a>
+              <a href="/restaurants/{{ this._id }}/edit">
+                <i class="fas fa-pencil-alt ml-4 mr-3"></i>
+              </a>
+              <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;" onsubmit="return deleteCheckAgain()">
+                <button type="submit" style="border: none; background: transparent;" class="fas fa-times-circle">
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>

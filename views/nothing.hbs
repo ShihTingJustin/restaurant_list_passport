@@ -1,0 +1,30 @@
+<!-- ./views/index.handlebars -->
+<!-- search bar -->
+<div class="container">
+  <div class="search-bar row d-flex flex-wrap justify-content-center">
+    <div
+      class="input-group row m-0 d-flex justify-content-center justify-content-sm-start col-12 col-sm-8 col-md-7 col-lg-7">
+      <form action="/search" method="GET"
+        class="search-area d-flex align-items-center p-0 col-6 col-sm-8 col-md-7 col-lg-7">
+        <i class="fas fa-search"></i>
+        <input type="text" name="keyword" class="form-control search-input" placeholder="尋找你愛的餐廳名稱或種類"
+          aria-label="Restaurant Name..." aria-describedby="search-button" value="{{ keyword }}">
+      </form>
+    </div>
+    <div class="dropdown form-group h-100 justify-content-sm-end col-5 col-sm-4 col-md-3 col-lg-2">
+      <select onchange="location = this.value;" name="sorting" id="inputState" class="form-control selector">
+        <option class='selector-title selector' selected>排列</option>
+        <option class='sort-asc selector' value="/sort/name/asc">餐廳名稱 (A ~ Z)</option>
+        <option class='sort-desc selector' value="/sort/name/desc">餐廳名稱 (Z ~ A)</option>
+        <option class="rating-desc selector" value="/sort/rating/desc">顧客評價 (高 ~ 低)</option>
+        <option class="rating-asc selector" value="/sort/rating/asc">顧客評價 (低 ~ 高)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- restaurant list -->
+  <div class="container">
+    <h2 class='d-flex justify-content-center align-items-center nothing-page'>Sorry, we can not find anything about
+      "{{ keyword }}"
+      🥺</h2>
+  </div>
