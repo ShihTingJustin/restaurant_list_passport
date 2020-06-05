@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
 
 const routes = require('./routes')
+const usePassport = require('./config/passport')  // it's a function!
 require('./config/mongoose')
 
 const app = express()
@@ -23,6 +24,8 @@ app.use(session({
 app.use(express.static('public'))  // setting static files
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(methodOverride('_method')) // API設定時帶上_method就會轉換為HTTP方法
+
+usePassport(app)
 
 app.use(routes)
 
