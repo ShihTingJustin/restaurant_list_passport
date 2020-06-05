@@ -7,10 +7,13 @@ const search = require('./modules/search')
 const sort = require('./modules/sort')
 const users = require('./modules/users')
 
-router.use('/restaurants', restaurants)
+const { authenticator } = require('../middleware/auth')
+
+// 條件寬鬆的 router 放後面 避免 redirect 迴圈
+router.use('/restaurants', authenticator, restaurants)
 router.use('/users', users)
-router.use('/search', search)
-router.use('/sort', sort)
-router.use('/', home)
+router.use('/search', authenticator, search)
+router.use('/sort', authenticator, sort)
+router.use('/', authenticator, home)
 
 module.exports = router
