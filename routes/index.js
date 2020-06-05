@@ -6,12 +6,14 @@ const restaurants = require('./modules/restaurants')
 const search = require('./modules/search')
 const sort = require('./modules/sort')
 const users = require('./modules/users')
+const auth = require('./modules/auth')
 
 const { authenticator } = require('../middleware/auth')
 
 // 條件寬鬆的 router 放後面 避免 redirect 迴圈
 router.use('/restaurants', authenticator, restaurants)
 router.use('/users', users)
+router.use('/auth', auth)
 router.use('/search', authenticator, search)
 router.use('/sort', authenticator, sort)
 router.use('/', authenticator, home)
