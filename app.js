@@ -4,6 +4,7 @@ const session = require('express-session')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const flash = require('connect-flash')
 
 const routes = require('./routes')
 const usePassport = require('./config/passport')  // it's a function!
@@ -27,12 +28,15 @@ app.use(methodOverride('_method')) // API設定時帶上_method就會轉換為HT
 
 usePassport(app)
 
+app.use(flash())
 // middleware let view get arguments
 app.use((req, res, next) => {
   console.log(req.user)
   //locals is an express object that can put arguments in response data
   res.locals.isAuthenticated = req.isAuthenticated()
   res.locals.user = req.user  // from passport deserializer
+  res.locals.success_msg = req.flash('success_msg')
+  res.locals.warning_msg = req.flash('warning_msg')
   next()
 })
 app.use(routes)
