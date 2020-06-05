@@ -32,7 +32,7 @@ app.use((req, res, next) => {
   console.log(req.user)
   //locals is an express object that can put arguments in response data
   res.locals.isAuthenticated = req.isAuthenticated()
-  res.locals.user = req.user  
+  res.locals.user = req.user  // from passport deserializer
   next()
 })
 app.use(routes)
