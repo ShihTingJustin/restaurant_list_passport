@@ -27,6 +27,14 @@ app.use(methodOverride('_method')) // API設定時帶上_method就會轉換為HT
 
 usePassport(app)
 
+// middleware let view get arguments
+app.use((req, res, next) => {
+  console.log(req.user)
+  //locals is an express object that can put arguments in response data
+  res.locals.isAuthenticated = req.isAuthenticated()
+  res.locals.user = req.user  
+  next()
+})
 app.use(routes)
 
 // start and listen on the Express server

@@ -26,10 +26,15 @@
         <a class="navbar-brand ml-5" href="/" style='font-size:30px;'>Feed Your Soul</a>
       </div>
       <div class="header-right font-weight-bold d-flex">
+        {{#if isAuthenticated}}
         <a class="px-2 py-2 mx-2" href="/restaurants/new"><i class="fas fa-plus-circle mr-2"></i>新增</a>
         <a class="px-2 py-2 mx-2" href="/"><i class="fas fa-heart mr-2"></i>最愛</a>
         <a class="px-2 py-2 mx-2" href="/"><i class="fas fa-bell mr-2"></i>通知</a>
-        <button type="submit" class="btn btn-danger ml-4 px-3">登入</button>
+        <a class="px-2 py-2 mx-2" href="/"><i class="fas fa-user-circle mr-2"></i>{{ user.name }}</a>
+        <a href="/users/logout" class="btn btn-danger ml-4 px-3">登出</a>
+        {{else}}
+        <a href="/users/login" class="btn btn-danger ml-4 px-3">登入</a>
+        {{/if}}
       </div>
     </nav>
     <!-- <div class="banner"></div> -->
