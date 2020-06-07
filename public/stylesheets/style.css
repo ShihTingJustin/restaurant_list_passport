@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -54,6 +63,102 @@ body {
 .navbar-brand {
   font-family: 'Mr Dafoe', cursive;
 }
+
+/* login page */
+.login-input-group {
+  margin: 3rem 0;
+  padding: 0 3rem;
+}
+
+.login-input-group input {
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  background: transparent;
+  border-radius: 0;
+  letter-spacing: 0.5px;
+}
+
+.login-input-group input:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #ff626f;
+}
+
+input:focus + .label {
+  color: #ff626f;
+  font-size: x-small;
+  font-weight: bolder;
+  transition-duration: 0.3s;
+}
+
+input + .label {
+  transition-duration: 0.3s;
+}
+
+#label-login-email {
+  position: absolute;
+  top: 28%;
+  left: 16%;
+}
+
+#label-login-pd {
+  position: absolute;
+  top: 44%;
+  left: 16%;
+}
+
+#label-reg-name {
+  position: absolute;
+  top: 20%;
+  left: 16%;
+}
+
+#label-reg-email {
+  position: absolute;
+  top: 33%;
+  left: 16%;
+}
+
+#label-reg-pd {
+  position: absolute;
+  top: 46%;
+  left: 16%;
+}
+
+#label-reg-cpd {
+  position: absolute;
+  top: 59%;
+  left: 16%;
+}
+
+.login-btn {
+  background: #dc3543;
+  color: #ffffff;
+}
+
+.login-btn:hover {
+  background: #ff626f;
+  color: #ffffff;
+}
+
+.fb-login-btn {
+  background: #1877f2;
+  color: #ffffff;
+}
+
+.fb-login-btn:hover {
+  background: #4f8ee0;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+/* login page */
 
 /* .blury {
   position: absolute;

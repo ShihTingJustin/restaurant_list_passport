@@ -7,6 +7,7 @@ function editCheckAgain() {
   return window.confirm('Do you really want to send these information ?')
 }
 
+
 const pathname = window.location.pathname
 if (pathname === '/search') {
   const searchBar = document.querySelector('.search-bar')
