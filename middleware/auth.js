@@ -1,5 +1,6 @@
 module.exports = {
   authenticator: (req, res, next) => {
+    // isAuthenticated()是passport提供的方法
     if (req.isAuthenticated()) {
       return next()
     }

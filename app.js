@@ -44,6 +44,7 @@ app.use((req, res, next) => {
   res.locals.user = req.user  // from passport deserializer
   res.locals.success_msg = req.flash('success_msg')
   res.locals.warning_msg = req.flash('warning_msg')
+  res.locals.error_msg = req.flash('error_msg')
   next()
 })
 app.use(routes)
