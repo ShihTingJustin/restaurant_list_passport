@@ -7,7 +7,7 @@ A simple restaurant website built with Node.js and Express.
 3. Create a restaurant page 
 4. Editor's tool in info-card and detail-page 
 5. Log-in with local or Facebook account **(New)**
-6. Sort restaurant by name or rating **(In Progress)**
+6. Sort restaurant by name or rating **(*In Progress*)**
 7. My favortie **(*In Progress*)**
 
 ![](https://i.imgur.com/Ut88f9Q.png)
@@ -25,7 +25,7 @@ $ npm install
 ```
 Use seed data 
 ```
-npm run seed
+$ npm run seed
 ```
 Execute 
 ```
@@ -52,7 +52,7 @@ http://localhost:3000
 * method-override: 3.0.0
 * mongoDB Community Server: 4.2.6
 * mongoose: 5.9.13
-* * passport: 0.4.1
+* passport: 0.4.1
 * passport-facebook: 3.0.0
 * passport-local: 1.0.0
 
