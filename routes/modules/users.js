@@ -12,7 +12,7 @@ router.get('/login', (req, res) => {
 
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
-  failureRedirect: '/users/login', 
+  failureRedirect: '/users/login',
   failureFlash: true
 }))
 
@@ -24,16 +24,14 @@ router.post('/register', (req, res) => {
   const { name, email, password, confirmPassword } = req.body
   const errors = []
 
-  if (!email) {
-    errors.push({ message: '請您填寫 Email 欄位。' })
-  }
-
-  if (!password) {
-    errors.push({ message: '請您填寫密碼欄位。' })
-  }
-
-  if (!confirmPassword) {
-    errors.push({ message: '請您填寫確認密碼欄位。' })
+  if (!email && !password && !confirmPassword) {
+    errors.push({ message: '請您填寫 Email、密碼及密碼確認欄位' })
+  } else if (!email) {
+    errors.push({ message: '請填寫您的 Email。' })
+  } else if (!password) {
+    errors.push({ message: '請填寫您的密碼。' })
+  } else if (!confirmPassword) {
+    errors.push({ message: '請確認密碼。' })
   }
 
   if (password !== confirmPassword) {

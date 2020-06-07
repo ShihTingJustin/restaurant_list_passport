@@ -7,6 +7,11 @@ function editCheckAgain() {
   return window.confirm('Do you really want to send these information ?')
 }
 
+// alert auto dismiss
+window.setTimeout(function () {
+  $(".alert").alert('close')
+}, 3000);
+
 
 const pathname = window.location.pathname
 if (pathname === '/search') {

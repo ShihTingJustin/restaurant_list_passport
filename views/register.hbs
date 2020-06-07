@@ -2,7 +2,7 @@
   <div class="col-10 col-md-8 col-lg-6 m-auto">
     <div class="card card-body">
       <h1 class="text-center mt-3">Register</h1>
-      {{> message}}
+      <div style="height: 3rem;">{{> message}}</div>      
       <form action="/users/register" method="POST">
         <div class="form-group login-input-group">
           <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name" value="{{ name }}">

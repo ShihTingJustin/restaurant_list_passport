@@ -2,14 +2,16 @@
   <div class="col-10 col-md-8 col-lg-6 m-auto">
     <div class="card card-body">
       <h1 class="text-center mt-3">Login</h1>
-      {{> message}}
+      <div style="height: 3rem;">{{> message}}</div>
       <form action="/users/login" method="POST">
         <div class="form-group login-input-group">
-          <input type="email" id="email" name="email" class="form-control input-area" placeholder="Enter Email">
+          <input required type="email" id="email" name="email" class="form-control input-area"
+            placeholder="Enter Email">
           <label class="label" id="label-login-email" for="email">Email</label>
         </div>
         <div class="form-group login-input-group">
-          <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
+          <input required type="password" id="password" name="password" class="form-control"
+            placeholder="Enter Password">
           <label class="label" id="label-login-pd" for="password">Password</label>
         </div>
         <button type="submit" class="btn login-btn btn-block">Login</button>
