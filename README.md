@@ -6,7 +6,7 @@ A simple restaurant website built with Node.js and Express.
 2. Search restaurant by name
 3. Create a restaurant page 
 4. Editor's tool in info-card and detail-page 
-5. Log-in **(New)**
+5. Log-in with local account or Facebook **(New)**
 6. Sort restaurant by name or rating **(In Progress)**
 7. My favortie **(*In Progress*)**
 
