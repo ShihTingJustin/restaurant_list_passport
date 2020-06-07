@@ -267,7 +267,7 @@ input + .label {
 } */
 
 .page-footer {
-  margin: 0 6rem 0 6rem;
+  margin: 6rem 6rem 0 6rem;
   border-top: 1px solid #DDDDDD;
 }
 
@@ -288,13 +288,10 @@ input + .label {
   text-decoration: none;
 }
 
-.page-footer {
-  margin-top: 8rem;
-}
-
 
 /* new edit */
 .input-area {
+  text-align: center;
   border: none;
   border-bottom: 1px solid #ccc;
   outline: none;

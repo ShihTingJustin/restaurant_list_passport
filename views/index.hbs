@@ -44,15 +44,15 @@
                 </span>
               </div>
             </div>
-            <div class="d-flex justify-content-center mt-2" style="margin-bottom: -1.5rem;" id="card-editor">
+            <div class="d-flex justify-content-around mt-4" style="margin-bottom: -1.5rem;" id="card-editor">
               <a href="/restaurants/{{ this._id }}">
                 <i class="fas fa-info-circle"></i>
               </a>
               <a href="/restaurants/{{ this._id }}/edit">
-                <i class="fas fa-pencil-alt ml-4 mr-3"></i>
+                <i class="fas fa-pencil-alt"></i>
               </a>
               <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;" onsubmit="return deleteCheckAgain()">
-                <button type="submit" style="border: none; background: transparent;" class="fas fa-times-circle">
+                <button type="submit" style="border: none; background: transparent;" class="fas fa-times-circle mr-4">
                 </button>
               </form>
             </div>

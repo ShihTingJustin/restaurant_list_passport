@@ -37,11 +37,11 @@
 
       <img class="rounded mx-auto d-block mb-4 w-100" src="{{ restaurant.image }}" alt="{{ restaurant.name }}"
         style="max-width: 600px;">
-      <div class="d-flex justify-content-center">
-        <a href="/restaurants/{{ restaurant._id }}/edit"><i class="fas fa-pencil-alt mx-2"></i></a>
+      <div class="d-flex justify-content-center mx-auto w-25 mt-5 p-2" style="background: #f7f8fa; border-radius: 10px">
+        <a href="/restaurants/{{ restaurant._id }}/edit"><i class="fas fa-pencil-alt mx-4"></i></a>
         <form action="/restaurants/{{ restaurant._id }}?_method=DELETE" method="POST" style="display: inline;"
           onsubmit="return deleteCheckAgain()">
-          <button type="submit" style="border: none;" class="fas fa-times-circle"></button>
+          <button type="submit" style="border: none;" class="fas fa-times-circle mx-4"></button>
       </div>
       </form>
     </div>
