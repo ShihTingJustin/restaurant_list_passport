@@ -65,7 +65,7 @@ body {
 
 .nav-login-btn:hover {
   background: #ff626f;
-  color: white;r
+  color: white;
 }
 
 .navbar-brand {
@@ -321,6 +321,19 @@ input + .label {
   text-decoration: none;
 }
 /* new edit */
+
+.new-wrapper-left input {
+  margin: 2.5rem 0;
+}
+
+textarea {
+  text-align: center;
+}
+
+.input-group textarea:focus {
+  box-shadow: none;
+  border: 1px solid #ff626f;
+}
 
 
 /* @media screen and (max-width: 575px) {

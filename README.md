@@ -8,7 +8,7 @@ A simple restaurant website built with Node.js and Express.
 4. Editor's tool in info-card and detail-page 
 5. Log-in with local or Facebook account **(New)**
 6. Sort restaurant by name or rating **(*In Progress*)**
-7. My favortie **(*In Progress*)**
+7. My favorite **(*In Progress*)**
 
 ![](https://i.imgur.com/Ut88f9Q.png)
 ![](https://i.imgur.com/KlCYub0.png)

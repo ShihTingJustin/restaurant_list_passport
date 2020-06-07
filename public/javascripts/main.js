@@ -12,6 +12,14 @@ window.setTimeout(function () {
   $(".alert").alert('close')
 }, 3000);
 
+// new page img preview
+const input = document.querySelector('.new-img-input')
+input.addEventListener('keyup', e => {
+  const imgDisplay = document.querySelector('.new-img-display')
+  console.log(e.target.value)
+  imgDisplay.src = e.target.value
+})
+
 
 const pathname = window.location.pathname
 if (pathname === '/search') {
