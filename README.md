@@ -15,23 +15,27 @@ A simple restaurant website built with Node.js and Express.
 ![](https://i.imgur.com/O3Aq2Nu.jpg)
 
 ## Getting Started
-Clone repository to your local computer
+1. Clone repository to your local computer
 ```
 $ git clone https://github.com/ShihTingJustin/restaurant_list_passport.git
 ```
-Install by [npm](https://www.npmjs.com/)
+2. Install by [npm](https://www.npmjs.com/)
 ```
 $ npm install
 ```
-Use seed data 
+3. Download env.example from [here](https://bit.ly/3eUqqhA)
+
+4. Rename **env.example** to **.env** and put it in root directory
+
+5. Use seed data 
 ```
 $ npm run seed
 ```
-Execute 
+6. Execute 
 ```
 $ npm run dev 
 ```
-Terminal show the message 
+7. Terminal show the message 
  ```
 Express is listening on localhost:3000
 mongodb connected!
