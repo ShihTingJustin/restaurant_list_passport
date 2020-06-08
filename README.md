@@ -17,7 +17,7 @@ A simple restaurant website built with Node.js and Express.
 ## Getting Started
 Clone repository to your local computer
 ```
-$ git clone https://github.com/ShihTingJustin/FeedYourSoul.git
+$ git clone https://github.com/ShihTingJustin/restaurant_list_passport.git
 ```
 Install by [npm](https://www.npmjs.com/)
 ```
